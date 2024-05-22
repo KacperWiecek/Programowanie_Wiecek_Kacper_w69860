@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4 - JS Examples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+     
+        <section>
+            <h2>Zmiana kolorów</h2>
+            <button class="color-btn" onclick="changeColor(this)">Przycisk 1</button>
+            <button class="color-btn" onclick="changeColor(this)">Przycisk 2</button>
+            <button class="color-btn" onclick="changeColor(this)">Przycisk 3</button>
+        </section>
+
+        <section>
+            <h2>Widoczność</h2>
+            <button class="toggle-btn" onclick="toggleVisibility()">Widoczność</button>
+            <div id="toggleElement" style="display: none;">
+                Zmiana widoczności elementu
+            </div>
+        </section>
+
+        
+        <section>
+            <h2>Dodaj do listy</h2>
+            <input type="text" id="itemInput" placeholder="Wpisz element listy">
+            <button onclick="addItem()">Dodaj do listy</button>
+            <ul id="itemList"></ul>
+        </section>
+
+        
+        <section>
+            <h2>Dodawanie do tabeli</h2>
+            <input type="text" id="firstName" placeholder="Imie">
+            <input type="text" id="lastName" placeholder="Nazwisko">
+            <button onclick="addToTable()">Dodaj do tabeli</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Imie</th>
+                        <th>Nazwisko</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Zamiana temperatury</h2>
+            <input type="number" id="temperatureInput" placeholder="Podaj temperature w C">
+            <button onclick="convertToCelsius()">Celsjusz</button>
+            <button onclick="convertToFahrenheit()">Fahrenheit</button>
+            <div id="conversionResult"></div>
+        </section>
+
+      
+        <section>
+            <h2>Kalkulator podstawowy</h2>
+            <input type="number" id="num1" placeholder="Pierwsza liczba">
+            <input type="number" id="num2" placeholder="Druga liczba">
+            <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('-')">-</button>
+            <button onclick="calculate('*')">*</button>
+            <button onclick="calculate('/')">/</button>
+            <button onclick="calculate('**')">^</button>
+            <div id="calcResult"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
