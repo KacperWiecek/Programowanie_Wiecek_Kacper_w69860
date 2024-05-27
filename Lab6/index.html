@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab6</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.8em;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="registrationForm">
+        <div>
+            <label for="firstName">Imie:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <div class="error" id="firstNameError"></div>
+        </div>
+        <div>
+            <label for="lastName">Nazwisko:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <div class="error" id="lastNameError"></div>
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error" id="emailError"></div>
+        </div>
+        <div>
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+            <div class="error" id="passwordError"></div>
+        </div>
+        <div>
+            <label for="confirmPassword">Powtórz hasło:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <div class="error" id="confirmPasswordError"></div>
+        </div>
+        <div>
+            <label for="gender">Płeć:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Wybierz</option>
+                <option value="male">Mężczyzna</option>
+                <option value="female">Kobieta</option>
+            </select>
+            <div class="error" id="genderError"></div>
+        </div>
+        <div>
+            <label for="phone">Nr. Telefonu:</label>
+            <input type="text" id="phone" name="phone" required>
+            <div class="error" id="phoneError"></div>
+        </div>
+        <div>
+            <label for="birthDate">Data Urodzenia:</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+            <div class="error" id="birthDateError"></div>
+        </div>
+        <div>
+            <label for="country">Kraj:</label>
+            <select id="country" name="country" required>
+                <option value="">Wybierz</option>
+                <option value="Polska">Polska</option>
+                <option value="Inny">Inny</option>
+            </select>
+            <div class="error" id="countryError"></div>
+        </div>
+        <div id="regionContainer" class="hidden">
+            <label for="region">Województwo:</label>
+            <select id="region" name="region" class="hidden" required>
+                <option value="">Wybierz</option>
+                <option value="dolnośląskie">Podkarpackie</option>
+                <option value="kujawsko-pomorskie">Małopolskie</option>
+            </select>
+            <input type="text" id="regionText" name="regionText" class="hidden">
+            <div class="error" id="regionError"></div>
+        </div>
+        <div>
+            <label for="address">Adres zamieszkania:</label>
+            <input type="text" id="address" name="address" required>
+            <div class="error" id="addressError"></div>
+        </div>
+        <div>
+            <input type="checkbox" id="sameAddress" name="sameAddress" checked>
+            <label for="sameAddress">Adres korespondencyjny jest taki sam jak adres zamieszkania</label>
+        </div>
+        <div id="correspondenceAddressContainer" class="hidden">
+            <label for="correspondenceAddress">Adres korespondencyjny:</label>
+            <input type="text" id="correspondenceAddress" name="correspondenceAddress">
+            <div class="error" id="correspondenceAddressError"></div>
+        </div>
+        <button type="submit">Zapisz</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
